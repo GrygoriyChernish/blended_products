@@ -10,9 +10,12 @@
 
   padding: 1.5rem;
 
-  background: #fff;
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  color: var(--primary-text-color);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .cart-summary__inner {
@@ -87,9 +90,7 @@
 }
 
 .cart-summary__hint {
-  margin: 1rem 0;
-
-  color: #94a3b8;
+  color: var(--primary-text-color);
   font-size: 0.9rem;
   text-align: center;
 }

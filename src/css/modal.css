@@ -24,12 +24,41 @@
   max-height: 90vh;
   padding: 2rem;
 
-  background: white;
+  color: var(--primary-text-color);
+  background-color: var(--card-bg-color);
   border-radius: 12px;
   transform: scale(0.95);
   animation: scaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   overflow-y: auto;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal__close-btn::after {
+  content: '✕';
+
+  font-size: 1.5rem;
+  color: #2d3748;
+  transition: color 0.3s ease;
+}
+
+[data-theme='dark'] .modal__close-btn::after {
+  color: var(--primary-text-color);
+}
+
+.modal__close-btn:hover::after {
+  color: #ff6b0a;
 }
 
 .modal-product {
@@ -61,6 +90,10 @@
   font-weight: 600;
 }
 
+[data-theme='dark'] .modal-product__title {
+  color: var(--primary-text-color);
+}
+
 .modal-product__tags {
   display: flex;
   gap: 0.5rem;
@@ -89,35 +122,16 @@
   line-height: 1.6;
 }
 
+[data-theme='dark'] .modal-product__description {
+  color: var(--primary-text-color);
+}
+
 .modal-product__price {
   margin: 1rem 0;
 
   color: #ff6b0a;
   font-size: 1.5rem;
   font-weight: 700;
-}
-
-.modal__close-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.modal__close-btn::after {
-  content: '✕';
-
-  font-size: 1.5rem;
-  color: #2d3748;
-  transition: color 0.3s ease;
-}
-
-.modal__close-btn:hover::after {
-  color: #ff6b0a;
 }
 
 .modal-product__shipping-information::before,
@@ -161,6 +175,14 @@
   transition: all 0.3s ease;
 }
 
+[data-theme='dark'] .modal-product__btn,
+[data-theme='dark'] .modal-product__buy-btn,
+[data-theme='dark'] .cart-summary__btn {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--border-color);
+}
+
 .modal-product__btn--cart {
   background: #ff6b0a;
   color: white;
@@ -179,12 +201,10 @@
 }
 
 .modal-product__btn--wishlist:hover {
-  background: #fffaf5;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 107, 10, 0.1);
 }
 
-/* Іконки для кнопок */
 .modal-product__btn::before {
   content: '';
   display: block;

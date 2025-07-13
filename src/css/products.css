@@ -6,8 +6,8 @@
 
 .products__item {
   padding: 1.5rem;
-
-  background: #fff;
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   list-style: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -37,11 +37,8 @@
 .products__title {
   margin-bottom: 0.5rem;
 
-  color: #2d3748;
   font-size: 1.1rem;
   font-weight: 600;
-
-  transition: color 0.2s ease;
 
   .products__item:hover & {
     color: #ff6b0a;
@@ -51,7 +48,6 @@
 .products__brand,
 .products__category {
   font-size: 0.9rem;
-  color: #4a5568;
   line-height: 1.4;
 }
 
@@ -73,12 +69,18 @@
 
   font-size: 1.2rem;
   font-weight: 700;
-  color: #ff6b0a;
 
   border-top: 1px solid #e2e8f0;
-  transition: color 0.2s ease;
 
   .products__item:hover & {
     color: #e05a00;
   }
+}
+
+.products__title,
+.products__brand,
+.products__category,
+.products__price {
+  color: var(--primary-text-color);
+  transition: color 0.3s;
 }

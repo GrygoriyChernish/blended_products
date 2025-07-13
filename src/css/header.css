@@ -1,6 +1,9 @@
 .header {
   padding: 20px 0;
 
+  background-color: var(--card-bg-color);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s, border-color 0.3s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .header__container {
@@ -29,9 +32,10 @@
   align-items: center;
   gap: 5px;
 
+  color: var(--primary-text-color);
+  transition: color 0.3s;
   font-weight: 500;
   letter-spacing: 0.02em;
-  transition: 200ms ease-in;
 
   &:hover,
   &:focus {
@@ -59,6 +63,10 @@
   }
 }
 
+[data-theme='dark'] .nav__link--active {
+  color: var(--accent-color);
+}
+
 .nav__count {
   padding: 0.2rem 0.6rem;
 
@@ -69,7 +77,7 @@
   border: 1px solid #ff6b0a;
   border-radius: 15px;
   background: #fff;
-  transition: 200ms ease-in;
+  transition: 0.3s ease-in;
 
   .nav__link:hover &,
   .nav__link:focus &,

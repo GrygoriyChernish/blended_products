@@ -8,7 +8,7 @@
 
 .categories__item {
   list-style: none;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 
   &:hover {
     transform: translateY(-2px);
@@ -18,14 +18,14 @@
 .categories__btn {
   padding: 0.8rem 1.5rem;
 
-  color: #2d3748;
+  color: var(--primary-text-color);
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 
-  background: #fff;
-  border: 2px solid #e2e8f0;
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -52,4 +52,9 @@
     color: white;
     border-color: #ff6b0a;
   }
+}
+
+[data-theme='dark'] .categories__btn--active {
+  background-color: var(--accent-color);
+  color: white;
 }

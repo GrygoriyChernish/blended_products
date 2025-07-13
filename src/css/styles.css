@@ -1,10 +1,3 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
 @import url('./modern-normalize.css');
 @import url('./reset.css');
 @import url('./base.css');
@@ -12,7 +5,6 @@
 @import url('./section.css');
 @import url('./animations.css');
 
-/* Sections style */
 @import url('./header.css');
 @import url('./search-form.css');
 @import url('./categories.css');
@@ -20,3 +12,4 @@
 @import url('./modal.css');
 @import url('./cart.css');
 @import url('./not-found.css');
+@import url('./helpers.css');
